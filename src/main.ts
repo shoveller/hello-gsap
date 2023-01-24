@@ -1,11 +1,9 @@
 import gsap from 'gsap'
 import './index.css'
 
-gsap.from(document.getElementsByName('box'), {   duration: 2,
-  scale: 0.5,
-  opacity: 0,
-  delay: 0.5,
-  stagger: 0.2,
-  ease: "elastic",
-  force3D: true
-})
+// gsap.to(document.getElementsByName('box'), { duration: 1, x: 100, y: 100, rotation: 45 })
+// gsap.from(document.getElementsByName('box'), { duration: 1, x: 100, y: 100, rotation: 45 })
+gsap.fromTo(document.getElementsByName('box'),
+  { duration: 1, x: -100, y: -100, rotation: -45 },
+  { duration: 1, x: 100, y: 100, rotation: 45 }
+)
