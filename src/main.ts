@@ -4,12 +4,8 @@ import './index.css'
 declare const nav: HTMLDivElement
 
 const tween = gsap.to(document.getElementsByName('box'), {
-  duration: 4,
-  x: () => nav.offsetWidth, // animate by the px width of the nav
-  xPercent: -100, // offset by the width of the box
-  rotation: 360,
-  ease: "none",
-  paused: true
+  duration: 3,
+  backgroundColor: 'red',
 })
 
 declare const play: HTMLButtonElement
