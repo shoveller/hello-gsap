@@ -5,7 +5,7 @@ declare const nav: HTMLDivElement
 debugger
 const tween = gsap.to(document.getElementsByName('box'), {
   duration: 3,
-  width: 200,
+  xPercent: 500,
 })
 
 declare const play: HTMLButtonElement
