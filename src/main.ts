@@ -2,10 +2,10 @@ import gsap from 'gsap'
 import './index.css'
 
 declare const nav: HTMLDivElement
-
+debugger
 const tween = gsap.to(document.getElementsByName('box'), {
   duration: 3,
-  backgroundColor: 'red',
+  width: 200,
 })
 
 declare const play: HTMLButtonElement
