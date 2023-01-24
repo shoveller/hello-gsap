@@ -1,9 +1,9 @@
 import gsap from 'gsap'
 import './index.css'
 
-// gsap.to(document.getElementsByName('box'), { duration: 1, x: 100, y: 100, rotation: 45 })
-// gsap.from(document.getElementsByName('box'), { duration: 1, x: 100, y: 100, rotation: 45 })
-gsap.fromTo(document.getElementsByName('box'),
-  { duration: 1, x: -100, y: -100, rotation: -45 },
-  { duration: 1, x: 100, y: 100, rotation: 45 }
-)
+const timeline = gsap.timeline()
+Array.from(document.getElementsByName('box')).forEach((elem, index) => {
+  timeline.to(elem, {
+    duration: 1, x: 200, scale: 0.1 * index
+  })
+})
